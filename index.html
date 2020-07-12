@@ -65,12 +65,12 @@
       <section class="main-hero">
         <div class="hero-cont">
           <h1 class="main-title">Эффективные решения для вашего бизнеса</h1>
-          <a class="link main" href="/">Заказать услугу</a>
+          <button data-modal-open class="link main" href="/">Заказать услугу</button>
         </div>
       </section>
       <!-- секция с преимуществами фирмы-->
       <section>
-        <h2 class="hide-title">Наши преимущества</h2>
+        <h2 class="visually-hidden">Наши преимущества</h2>
         <ul class="list container advantages">
           <li class="list-advantages">
             <svg class="img-advantages" aria-label="Картинка с антенной">
@@ -461,7 +461,9 @@
         </ul>
       </section>
     </main>
+
     <!-- Футер-->
+
     <footer class="footer">
       <div class="footer-content">
         <div>
@@ -489,7 +491,7 @@
         <!-- секция в футере- соцсети-->
         <section class="connect">
           <div class="follow">
-            <h2 class="footer-title">присоединяйтесь</h2>
+            <b class="footer-title">присоединяйтесь</b>
             <ul class="list contacts-team">
               <li class="icon-follow">
                 <a
@@ -539,7 +541,12 @@
           </div>
         </section>
         <div class="mailing">
-          <h2 class="footer-title">подпишитесь на рассылку</h2>
+          <div class="subscription">  
+            <b class="footer-title">подпишитесь на рассылку</b>
+            <label  class="mail-input">
+              <input class="input-mail" type="email" placeholder="E-mail">
+            </label>
+          </div>
           <button class="mail-to" type="button">
             Подписаться
             <svg class="mail-icon" width="24px" height="24px">
@@ -549,5 +556,91 @@
         </div>
       </div>
     </footer>
+
+    <!-- мадальное окно -->
+
+    <div data-modal class="backdrop is-hidden">
+      <div class="modal">
+          <h2 class="h1-modal">
+            Оставьте свои данные, мы вам перезвоним
+          </h2>
+          <form class="modal-form">
+            <label class="form-fild">
+              <input class="form-input" 
+                type="text" name="name" placeholder=" ">
+                <span class="input-name">Имя</span>
+                <div class="vrapper-icon" >
+                  <svg class="fild-icon" width="16px" height="16px">
+                    <use href="./img/symbol-defs.svg#icon-body"></use>
+                  </svg>
+                </div>
+              </label>
+            <label class="form-fild">
+              <input class="form-input" type="tel"
+                 name="telephone" placeholder=" ">
+                <span class="input-name">Телефон</span>
+                <div class="vrapper-icon" >
+                  <svg class="fild-icon" width="16px" height="16px">
+                    <use href="./img/symbol-defs.svg#icon-tel"></use>
+                  </svg>
+                </div>
+            </label>
+
+            <label class="form-fild">
+              <input class="form-input" type="email" 
+              name="mail" placeholder=" ">
+
+              <span class="input-name">Почта</span>
+              <div class="vrapper-icon" >
+                <svg class="fild-icon" width="16px" height="16px">
+                  <use href="./img/symbol-defs.svg#icon-mail"></use>
+                </svg>
+              </div>
+            </label>
+
+
+            <!-- ячейка оставьте комментарии -->
+
+            
+            <label class="form-fild placeholder-area">
+              
+              <textarea  placeholder=" "
+              class="comment"
+              name="comment"></textarea>
+
+              <span class="text-comment">Kомментарий</span>
+            </label>
+
+            <label class="checkbox">
+                <input class="check visually-hidden" id="checkbox" type="checkbox" name="checkbox">
+                <div class="chek-icon"></div>
+                 <span for="checkbox">Соглашаюсь с рассылкой и принимаю 
+                   <a class="terms" href="/">Условия договора</a></span>
+            </label>
+
+             <div>
+               <button class="send" type="submit"
+               name="send">Отправить</button>
+             </div>
+          </form> 
+
+          <div  class="close">
+            <button class="close-icon" data-modal-close type="button" name="close">
+              <svg  width="11px" height="11px">
+                <use href="./img/symbol-defs.svg#icon-x "></use>
+              </svg>
+            </button>
+           </div>
+
+      </div>
+
+    </div>
+
+
+
+
+    <script src="./js/modal.js"></script>
+
+
   </body>
 </html>

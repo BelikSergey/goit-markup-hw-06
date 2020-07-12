@@ -200,16 +200,16 @@ img {
   border-top: 1px solid #ECECEC;
 }
 
-.main-title {
-
+.visually-hidden {
   position: absolute;
-  opacity: 0;
-  
-  font-size: 0px;
-  margin: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
   padding: 0;
-  height: 0;
-  width: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+
 }
 
 /* Кнопки навигации */
@@ -251,6 +251,7 @@ img {
   color: #ffffff;
   /* border-radius: 4px; */
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
+  outline-style: none;
 }
 
 .nav-buttom {
@@ -373,7 +374,10 @@ img {
   line-height: 1.88;
 }
 
-/* Footer */
+/* =======Footer=========*/
+
+
+
 .footer-content {
   display: flex;
   padding-left: 15px;
@@ -425,7 +429,7 @@ img {
 .contacts-in-footer:focus {
   outline: none;
   color: var(--accent-collor);
-  /* border: 1px solid var(--accent-collor); */
+ 
 }
 
 .contacts-links {
@@ -443,6 +447,7 @@ img {
 }
 
 .footer-title {
+  display: block;
   margin-bottom: 20px;
   margin-top: 0px;
 
@@ -461,9 +466,14 @@ img {
   fill: var(--text-color-w);
 }
 
+/*  Блок 
+         подписываемся 
+                   на рассылку
+         
+*/
+
 .mailing {
-  display: inline-block;
-  padding-top: 57px;
+  display: flex;
   margin-left: auto;
 }
 
@@ -471,9 +481,10 @@ img {
   display: flex;
   padding: 10px 29px;
   border-radius: 4px;
-
-  align-items: center;
-  justify-content: center;
+  
+  width: 200px;
+  height: 50px;
+  margin-top: 108px;
 
   background-color: var(--accent-collor);
   color: var(--text-color-w);
@@ -483,12 +494,40 @@ img {
   font-size: 16px;
   line-height: 30px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-style: none;
+
 }
+
+.mail-to:focus,
+.mail-to:hover {
+  outline-style: none;
+}
+
 
 .mail-icon {
   margin-left: 10px;
   fill: #ffffff;
 }
+
+.subscription {
+  display: inline-block;
+  margin-right: 8px;
+  margin-top: 73px;
+
+}
+.input-mail {
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  background-color: #2F303A;
+  padding-left:16px;
+
+}
+
+
 
 /* Css для иконок в футере */
 
@@ -520,17 +559,15 @@ img {
   height: 44px;
   border-radius: 50%;
 
-
   transition-property: fill,background-color ;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .link-icon-team {
   fill: currentColor;
 
 }
-
-
 
 .team-icon-li:hover,
 .team-icon-li:focus {
@@ -553,7 +590,7 @@ img {
 .follow {
   display: block;
   margin-left: 69px;
-  margin-top: 57px;
+  margin-top: 72px;
 }
 
 .footer-title {

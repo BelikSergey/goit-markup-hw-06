@@ -60,24 +60,24 @@
     </header>
     <main class="main">
       <!-- скрытый заголовок -->
-      <h1 class="main-title">Наши работы</h1>
+      <h1 class="visually-hidden">Наши работы</h1>
       <!-- Фильтр отбора по типу предлагаемых работ-->
       <div class="container">
         <ul class="list container-buttoms">
           <li class="nav-buttom">
-            <button class="button" type="button">Все</button>
+            <button class="button" type="radio">Все</button>
           </li>
           <li class="nav-buttom">
-            <button class="button" type="button">Веб-сайты</button>
+            <button class="button" type="radio">Веб-сайты</button>
           </li>
           <li class="nav-buttom">
-            <button class="button" type="button">Приложения</button>
+            <button class="button" type="radio">Приложения</button>
           </li>
           <li class="nav-buttom">
-            <button class="button" type="button">Дизайн</button>
+            <button class="button" type="radio">Дизайн</button>
           </li>
           <li class="nav-buttom">
-            <button class="button" type="button">Маркетинг</button>
+            <button class="button" type="radio">Маркетинг</button>
           </li>
         </ul>
       </div>
@@ -270,8 +270,11 @@
         </div>
       </section>
     </main>
+
+    <!-- ========= Footer======= -->
+
     <footer class="footer">
-      <div class="footer-content">
+      <d class="footer-content">
         <div>
           <a class="logo-footer" href="./index.html">
             <img
@@ -297,7 +300,7 @@
         <!-- секция в футере- соцсети-->
         <section class="connect">
           <div class="follow">
-            <h2 class="footer-title">присоединяйтесь</h2>
+            <b class="footer-title">присоединяйтесь</b>
             <ul class="list contacts-team">
               <li class="icon-follow">
                 <a
@@ -347,7 +350,12 @@
           </div>
         </section>
         <div class="mailing">
-          <h2 class="footer-title">подпишитесь на рассылку</h2>
+          <div class="subscription">  
+            <b class="footer-title">подпишитесь на рассылку</b>
+            <label  class="mail-input">
+              <input class="input-mail" type="email" placeholder="E-mail">
+            </label>
+          </div>
           <button class="mail-to" type="button">
             Подписаться
             <svg class="mail-icon" width="24px" height="24px">
@@ -355,7 +363,7 @@
             </svg>
           </button>
         </div>
-      </div>
+      </d iv>
     </footer>
   </body>
 </html>
