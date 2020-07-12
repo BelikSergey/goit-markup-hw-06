@@ -716,13 +716,20 @@ Footer
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   background-color: #2F303A;
-  padding-left:16px;
+  padding-left:16px; 
 
+}
+
+.input-mail:focus {
+  outline-style: none;
+  color: var(--text-color-w);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 
 /* 
-Beckdrop
+=========== Beckdrop ============
 
 
 */
@@ -745,7 +752,7 @@ Beckdrop
 
 /* 
 
-Окно Модалки
+=========   Окно Модалки   ==========
 
 
 */
@@ -978,7 +985,7 @@ Beckdrop
 }
 
 
-/* отправка формы  */
+/* ========отправка формы ======== */
 
 .send {
   padding: 0;

@@ -527,6 +527,13 @@ img {
 
 }
 
+.input-mail:focus {
+  outline-style: none;
+  color: var(--text-color-w);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 
 
 /* Css для иконок в футере */
